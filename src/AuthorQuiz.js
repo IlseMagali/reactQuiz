@@ -12,6 +12,7 @@ function Header() {
 }
 
 function Book({ title }) {
+  console.log('Book component', {title});
   return (
     <div className="answer">
       <h4>{title}</h4>
@@ -20,11 +21,11 @@ function Book({ title }) {
 }
 
 function Turn({author}) {
+  console.log('author', {author})
   return (
     <div className="row turn" style={{ backgroundColor: "white" }}>
       <div className="col-4 offset-1">
-        {/* <img src={author} className="authorimage" alt="Author" /> */}
-        <p>{console.log(author)}</p>
+        <img src={author.author.imageUrl} className="authorimage" alt="Author" />
       </div>
       <div className="col-6">
         {author.books.map(title => (
